@@ -21,6 +21,7 @@ public class FishyStats : MonoBehaviour
 	{
 		Transform exp = (Transform)GameObject.Instantiate(explosion);
 		exp.position = this.transform.position;
+		exp.GetComponent<Detonator>().size = this.transform.localScale.x;
 		
 		//explode
 		Destroy(this.gameObject);
