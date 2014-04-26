@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
+  m_Layer: 0
+  m_Name: Ocean
+  m_TagString: Ocean
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 3452816845
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e45003b937a49438448ba3f1a8d931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 32
+  height: 32
+  renderTexWidth: 128
+  renderTexHeight: 128
+  scale: 3
+  speed: .699999988
+  wakeDistance: 5
+  size: {x: 150, y: 1, z: 150}
+  tiles: 2
+  choppy_scale: 6
+  material: {fileID: 2100000, guid: c541ac636f7ff4f20aeb8747a4729d2b, type: 2}
+  followMainCamera: 1
+  player: {fileID: 0}
+  sun: {fileID: 0}
+  SunDir: {x: 0, y: 0, z: 0, w: 0}
+  waterType: 3
+  surfaceColor: {r: .300000012, g: .5, b: .300000012, a: 1}
+  iceSurfaceColor: {r: .269603491, g: .340532511, b: .350746274, a: 1}
+  darkSurfaceColor: {r: .25373137, g: .25373137, b: .25373137, a: 1}
+  islandsSurfaceColor: {r: .143851623, g: .755520463, b: .917910457, a: 1}
+  waterColor: {r: .300000012, g: .400000006, b: .300000012, a: 1}
+  iceWaterColor: {r: 0, g: .858208954, b: .822200358, a: 1}
+  darkWaterColor: {r: 0, g: 0, b: 0, a: 1}
+  islandsWaterColor: {r: .671641827, g: 1, b: .848450005, a: 1}
+  oceanShader: {fileID: 4800000, guid: a5d48e5fe75569a47bf0e4e46e5dfe25, type: 3}
+  renderReflection: 1
+  renderLayers:
+    serializedVersion: 2
+    m_Bits: 4294967273
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f218a53571e80e94ca13a81c8dfafa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  humidity: 0
+  waveSacale: 4
+  forceStorm: 0
+  prevValue: .100000001
+  nextValue: .400000006
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b85562920aad04f9aaf631e13700ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mist: {fileID: 100002, guid: de156c31f51a89643aa9c0256677e1dc, type: 2}
+  mistLow: {fileID: 100000, guid: 8d2d7b990b9ce78439acae0d40a9dbac, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
