@@ -5,6 +5,10 @@ public class Playerton : MonoBehaviour
 {
 	public static Playerton i;
 	
+	public int hp = 10;
+
+	public Transform explosion;
+	
 	void Awake()
 	{
 		i = this;
@@ -16,5 +20,25 @@ public class Playerton : MonoBehaviour
 			UnderwaterEffect.Instance.enabled = true;
 		else
 			UnderwaterEffect.Instance.enabled = false;
+	}
+	
+	public void Hit(int damage)
+	{
+		hp -= damage;
+		
+		Debug.Log("PLAYER Hit for " + damage + " damage. HP: " + hp);
+		
+		if (hp <= 0)
+			Die();
+	}
+	
+	public void Die()
+	{
+		Transform exp = (Transform)GameObject.Instantiate(explosion);
+		exp.position = this.transform.position;
+		exp.GetComponent<Detonator>().size = this.transform.localScale.x;
+		
+		//explode
+		Debug.DebugBreak();
 	}
 }

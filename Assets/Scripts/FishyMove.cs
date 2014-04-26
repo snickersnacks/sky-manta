@@ -11,18 +11,30 @@ public class FishyMove : MonoBehaviour
 	private float nextpitch = 0;
 	private float nextyaw = 0;
 	
+	private float damping = 10f;
+
+	
+	private float distToShoot = 100f;
 	
 	void Update () 
 	{
-		if (nextrottime < Time.time)
+		if (Vector3.Distance(Playerton.i.transform.position, this.transform.position) < distToShoot)
 		{
-			nextrottime = Time.time + Random.Range(5, 10);
-			nextroll = Random.Range(-1f, 1f);
-			nextpitch = Random.Range(-1f, 1f);
-			nextyaw = Random.Range(-1f, 1f);
+			Quaternion rotation = Quaternion.LookRotation(Playerton.i.transform.position - this.transform.position);
+			this.transform.rotation = Quaternion.Slerp(this.transform.rotation, rotation, Time.deltaTime * damping);
 		}
-		
-		UpdateFunction();
+		else
+		{
+			if (nextrottime < Time.time)
+			{
+				nextrottime = Time.time + Random.Range(5, 10);
+				nextroll = Random.Range(-1f, 1f);
+				nextpitch = Random.Range(-1f, 1f);
+				nextyaw = Random.Range(-1f, 1f);
+			}
+			
+			UpdateFunction();
+		}
 	}
 	
 	

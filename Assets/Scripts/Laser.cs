@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Laser : MonoBehaviour 
 {
+	public GameObject Firererer;
 	public int damage = 1;
 	
 	private float timetokill = 5;
@@ -21,13 +22,26 @@ public class Laser : MonoBehaviour
 	
 	void OnTriggerEnter(Collider col)
 	{
-		FishyStats stats = col.gameObject.GetComponent<FishyStats>();
-		if (stats != null)
+		if (col.gameObject != Firererer)
 		{
-			stats.Hit(damage);
-			Destroy(this.gameObject);
+			FishyStats stats = col.gameObject.GetComponent<FishyStats>();
+			if (stats != null)
+			{
+				stats.Hit(damage);
+				Destroy(this.gameObject);
+			}
+			else
+			{
+				Playerton player = col.gameObject.GetComponent<Playerton>();
+				if (player != null)
+				{
+					player.Hit(damage);
+					Destroy(this.gameObject);
+				}
+				else
+					Debug.Log("Hit thing, but no fishy stats");
+			}
 		}
-		else
-			Debug.Log("Hit thing, but no fishy stats");
+
 	}
 }

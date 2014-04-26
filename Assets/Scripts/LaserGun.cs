@@ -18,6 +18,7 @@ public class LaserGun : MonoBehaviour
 			{
 				this.audio.Play();
 				Transform laserbeam = (Transform)GameObject.Instantiate(LaserBeam);
+				laserbeam.GetComponent<Laser>().Firererer = this.transform.parent.gameObject;
 				laserbeam.position = this.transform.position;
 				laserbeam.rotation = this.transform.rotation;
 				laserbeam.rigidbody.velocity = this.transform.parent.rigidbody.velocity; //lol
