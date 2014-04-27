@@ -16,12 +16,20 @@ public class ChargeShot : MonoBehaviour
 	
 	void Update()
 	{
+		if (deaded)
+			return;
+
 		if (killtime < Time.time)
 			DestroyImmediate(this.gameObject);
 	}
+
+	private bool deaded = false;
 	
 	void OnTriggerEnter(Collider col)
 	{
+		if (deaded)
+			return;
+
 		if (col.gameObject != Firererer)
 		{
 			FishyStats stats = col.gameObject.GetComponent<FishyStats>();
@@ -29,6 +37,7 @@ public class ChargeShot : MonoBehaviour
 			{
 				stats.Hit(damage);
 				Destroy(this.gameObject);
+				deaded = true;
 			}
 			else
 			{
@@ -37,6 +46,7 @@ public class ChargeShot : MonoBehaviour
 				{
 					player.Hit(damage);
 					Destroy(this.gameObject);
+					deaded = true;
 				}
 				else
 					Debug.Log("Hit thing, but no fishy stats");
