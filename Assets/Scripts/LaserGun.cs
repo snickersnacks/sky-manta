@@ -35,7 +35,7 @@ public class LaserGun : MonoBehaviour
 				chargeEnd = Time.time + chargeTime;
 
 				if (currentCharge != null)
-					Destroy(currentCharge.gameObject);
+					DestroyImmediate(currentCharge.gameObject);
 				
 				currentCharge = (Transform)GameObject.Instantiate(ChargeBeam);
 				currentCharge.GetComponent<ChargeShot>().Firererer = Playerton.i.gameObject;
@@ -72,7 +72,7 @@ public class LaserGun : MonoBehaviour
 		{
 			chargeEnd = float.MaxValue;
 			if (currentCharge != null)
-				Destroy(currentCharge.gameObject);
+				DestroyImmediate(currentCharge.gameObject);
 		}
 		else if (Input.GetButton("Fire1"))
 		{

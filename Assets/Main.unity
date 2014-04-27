@@ -2024,18 +2024,18 @@ MonoBehaviour:
   height: 32
   renderTexWidth: 128
   renderTexHeight: 128
-  scale: 3
+  scale: 4.19999981
   speed: .699999988
   wakeDistance: 5
   size: {x: 300, y: 1, z: 300}
-  tiles: 5
+  tiles: 7
   choppy_scale: 6
   material: {fileID: 2100000, guid: c541ac636f7ff4f20aeb8747a4729d2b, type: 2}
   followMainCamera: 1
   player: {fileID: 117398113}
   sun: {fileID: 0}
   SunDir: {x: 0, y: 0, z: 0, w: 0}
-  waterType: 3
+  waterType: 0
   surfaceColor: {r: .300000012, g: .5, b: .300000012, a: 1}
   iceSurfaceColor: {r: .269603491, g: .340532511, b: .350746274, a: 1}
   darkSurfaceColor: {r: .25373137, g: .25373137, b: .25373137, a: 1}
@@ -2465,10 +2465,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cfe5eb7de83bbd84a99fd6731521b975, type: 2}
       propertyPath: tiles
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: cfe5eb7de83bbd84a99fd6731521b975, type: 2}
       propertyPath: renderReflection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cfe5eb7de83bbd84a99fd6731521b975, type: 2}
+      propertyPath: scale
+      value: 4.19999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cfe5eb7de83bbd84a99fd6731521b975, type: 2}
+      propertyPath: waterType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

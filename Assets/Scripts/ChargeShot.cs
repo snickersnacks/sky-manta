@@ -17,7 +17,7 @@ public class ChargeShot : MonoBehaviour
 	void Update()
 	{
 		if (killtime < Time.time)
-			Destroy(this.gameObject);
+			DestroyImmediate(this.gameObject);
 	}
 	
 	void OnTriggerEnter(Collider col)
