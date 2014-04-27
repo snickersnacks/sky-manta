@@ -7,7 +7,7 @@ public class FishyGun : MonoBehaviour
 	private float nextfire = 0;
 	private float delay = 0.4f;
 
-	private float distToShoot = 100f;
+	private float distToShoot = 1f;
 	
 	// Update is called once per frame
 	void Update () 
