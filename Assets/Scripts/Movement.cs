@@ -43,6 +43,7 @@ public class Movement : MonoBehaviour
 			AmbientSpeed = 200;
 
 		this.audio.pitch = AmbientSpeed / 5000;
+		avataranim.speed = this.audio.pitch;
 
 		float mul = AmbientSpeed / BaseAmbientSpeed;
 		this.particleSystem.emissionRate = mul * BasePartRate;
@@ -55,6 +56,8 @@ public class Movement : MonoBehaviour
 		
 		Debug.Log("Speed: " + AmbientSpeed);	
 	}
+
+	public Animator avataranim;
 	
 	public float BasePartRate = 100f;
 	public float BasePartSpeed = -5;
