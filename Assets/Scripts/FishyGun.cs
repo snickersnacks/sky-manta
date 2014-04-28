@@ -1,13 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class FishyGun : MonoBehaviour 
+public class FishyGun : Gun 
 {
 	public Transform LaserBeam;
 	private float nextfire = 0;
 	private float delay = 0.4f;
 
-	private float distToShoot = 1f;
+	public float distToShoot = 100f;
 	
 	// Update is called once per frame
 	void Update () 
@@ -18,7 +18,7 @@ public class FishyGun : MonoBehaviour
 			{
 				this.audio.Play();
 				Transform laserbeam = (Transform)GameObject.Instantiate(LaserBeam);
-				laserbeam.GetComponent<Laser>().Firererer = this.transform.parent.gameObject;
+				laserbeam.GetComponent<Bullet>().Firererer = this.GetStatsObject();
 				laserbeam.position = this.transform.position;
 				laserbeam.rotation = this.transform.rotation;
 				laserbeam.rigidbody.velocity = this.transform.parent.rigidbody.velocity; //lol

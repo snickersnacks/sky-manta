@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class LaserGun : Gun 
+public class TurtleGun : Gun 
 {
 	public Transform LaserBeam;
 	public Transform ChargeBeam;

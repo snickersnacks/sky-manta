@@ -1,11 +1,20 @@
 using UnityEngine;
 using System.Collections;
 
-public class FishyStats : MonoBehaviour 
+public class ThingStats : MonoBehaviour 
 {
-	public int hp = 5;
+	public int hp = 10;
 	
-	public Transform explosion;
+	private static GameObject explosion;
+
+	void Awake()
+	{
+		if (explosion == null)
+		{
+			Debug.Log("Loading explosion");
+			explosion = (GameObject)Resources.Load("Explosion");
+		}
+	}
 	
 	public void Hit(int damage)
 	{
@@ -19,7 +28,7 @@ public class FishyStats : MonoBehaviour
 	
 	public void Die()
 	{
-		Transform exp = (Transform)GameObject.Instantiate(explosion);
+		Transform exp = ((GameObject)GameObject.Instantiate(explosion)).transform;
 		exp.position = this.transform.position;
 		exp.GetComponent<Detonator>().size = this.transform.localScale.x;
 		
