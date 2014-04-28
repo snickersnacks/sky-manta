@@ -1,27 +1,29 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Playerton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OctoMove.cs">
     <Files>
       <File FileName="Assets\Scripts\FishyGun.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\FishyMove.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Playerton.cs" Line="32" Column="3" />
+      <File FileName="Assets\Scripts\Playerton.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LaserGun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ThingStats.cs" Line="32" Column="11" />
+      <File FileName="Assets\Scripts\ThingStats.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Bullet.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TurtleGun.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UnderwaterEffect.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FishySpawner.cs" Line="15" Column="77" />
+      <File FileName="Assets\Scripts\FishySpawner.cs" Line="1" Column="1" />
       <File FileName="Assets\PorglezompPyroclastics\README.txt" Line="1" Column="1" />
       <File FileName="Assets\PorglezompPyroclastics\Explosion.shader" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Movement.cs" Line="1" Column="1" />
       <File FileName="Assets\PorglezompPyroclastics\ExplosionMat.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\OctoMove.cs" Line="38" Column="106" />
+      <File FileName="Assets\Scripts\OctoMove.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\OctoSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Octopoop.cs" Line="27" Column="39" />
-      <File FileName="Assets\Scripts\OctoGun.cs" Line="57" Column="25" />
-      <File FileName="Assets\Scripts\Octopoopgun.cs" Line="25" Column="52" />
+      <File FileName="Assets\Scripts\Octopoop.cs" Line="23" Column="7" />
+      <File FileName="Assets\Scripts\OctoGun.cs" Line="33" Column="3" />
+      <File FileName="Assets\Scripts\Octopoopgun.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Dialog.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BOSSSPAWN.cs" Line="11" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

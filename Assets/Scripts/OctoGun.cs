@@ -21,6 +21,11 @@ public class OctoGun : MonoBehaviour
 	{
 		i = this;
 		ostats = this.GetComponent<ThingStats>();
+		
+		foreach (ParticleSystem par in EyeParts)
+		{
+			par.enableEmission = false;
+		}
 	}
 
 	// Use this for initialization
