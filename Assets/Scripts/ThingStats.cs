@@ -29,7 +29,7 @@ public class ThingStats : MonoBehaviour
 			Die();
 	}
 
-	private bool deaded = false;
+	protected bool deaded = false;
 	public void Die()
 	{
 		if (deaded == true)

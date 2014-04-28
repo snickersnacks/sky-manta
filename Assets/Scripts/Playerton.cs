@@ -6,6 +6,8 @@ public class Playerton : ThingStats
 	public static Playerton i;
 
 	public Transform manta;
+
+	public Texture RestartTexture;
 	
 	void Awake()
 	{
@@ -27,5 +29,18 @@ public class Playerton : ThingStats
 		this.GetComponent<Movement>().enabled = false;
 		this.GetComponent<ParticleSystem>().enableEmission = false;
 		Destroy(manta.gameObject);
+	}
+
+	void OnGUI()
+	{
+		if (deaded)
+		{
+			Screen.showCursor = true;
+			if (GUI.Button(new Rect(Screen.width/2, Screen.height/2, 100, 100), RestartTexture))
+			{
+				Screen.showCursor = false;
+				Application.LoadLevel(0);
+			}
+		}
 	}
 }
