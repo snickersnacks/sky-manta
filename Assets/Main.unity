@@ -1415,6 +1415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  manta: {fileID: 1941714583}
 --- !u!65 &117398120
 BoxCollider:
   m_ObjectHideFlags: 0

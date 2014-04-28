@@ -42,6 +42,8 @@ public class ThingStats : MonoBehaviour
 		//explode
 		if (this.gameObject != Playerton.i.gameObject)
 			Destroy(this.gameObject);
+		else
+			Playerton.i.DieDie();
 
 		deaded = true;
 	}

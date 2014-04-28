@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class OctoGun : MonoBehaviour 
 {
@@ -47,7 +48,16 @@ public class OctoGun : MonoBehaviour
 					Quaternion to = eye.rotation;
 
 					eye.rotation = Quaternion.Lerp(from, to, magic * Time.deltaTime);
+					
+					Ray ray = new Ray(eye.transform.position, eye.transform.TransformDirection(Vector3.forward));
+					RaycastHit[] hits = Physics.SphereCastAll(ray, 6, 5000);
+					bool didhit = hits.Any(hit => hit.collider.gameObject == Playerton.i.gameObject);
+
+					if (didhit && Playerton.i.transform.position.y > 0)
+						Playerton.i.Die();
 				}
+
+
 
 				foreach (ParticleSystem par in EyeParts)
 				{

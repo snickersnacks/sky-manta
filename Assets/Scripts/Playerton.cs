@@ -4,6 +4,8 @@ using System.Collections;
 public class Playerton : ThingStats 
 {
 	public static Playerton i;
+
+	public Transform manta;
 	
 	void Awake()
 	{
@@ -18,5 +20,12 @@ public class Playerton : ThingStats
 			UnderwaterEffect.Instance.enabled = true;
 		else
 			UnderwaterEffect.Instance.enabled = false;
+	}
+
+	public void DieDie()
+	{
+		this.GetComponent<Movement>().enabled = false;
+		this.GetComponent<ParticleSystem>().enableEmission = false;
+		Destroy(manta.gameObject);
 	}
 }
