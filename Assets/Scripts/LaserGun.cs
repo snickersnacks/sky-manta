@@ -73,13 +73,13 @@ public class LaserGun : Gun
 			if (currentCharge != null)
 				DestroyImmediate(currentCharge.gameObject);
 		}
-		else if (Input.GetButton("Fire1"))
+		else if (Input.GetButtonDown("Fire1"))
 		{
 			if (nextfire < Time.time)
 			{
 				StartCoroutine(FireShot(0.01f));
 				StartCoroutine(FireShot(0.1f));
-				nextfire = Time.time + delay;
+				//nextfire = Time.time + delay;
 			}
 		}
 	}

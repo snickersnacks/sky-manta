@@ -8,6 +8,8 @@ public class Playerton : ThingStats
 	void Awake()
 	{
 		i = this;
+
+		Screen.showCursor = false;
 	}
 	
 	void Update()
