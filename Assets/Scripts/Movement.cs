@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Movement : MonoBehaviour 
 {
-	float slowrate = -5000;
+	float slowrate = -2000;
 	float wateraccrate = 500;
 	float airaccrate = 400;
 	
