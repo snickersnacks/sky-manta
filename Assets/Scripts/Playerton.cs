@@ -36,7 +36,7 @@ public class Playerton : ThingStats
 		if (deaded)
 		{
 			Screen.showCursor = true;
-			if (GUI.Button(new Rect(Screen.width/2, Screen.height/2, 100, 100), RestartTexture))
+			if (GUI.Button(new Rect(Screen.width/2 - 800/2, Screen.height/2 - 400/2, 800, 400), RestartTexture))
 			{
 				Screen.showCursor = false;
 				Application.LoadLevel(0);
