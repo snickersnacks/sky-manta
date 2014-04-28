@@ -5,15 +5,18 @@ public class ThingStats : MonoBehaviour
 {
 	public int hp = 10;
 	
-	private static GameObject explosion;
+	private static GameObject _explosion;
+	public static GameObject explosion 
+	{ 
+		get 
+		{ 
+			if (_explosion == null)
+			{
+				_explosion = (GameObject)Resources.Load("Explosion");
+			}
 
-	void Awake()
-	{
-		if (explosion == null)
-		{
-			Debug.Log("Loading explosion");
-			explosion = (GameObject)Resources.Load("Explosion");
-		}
+			return _explosion; 
+		} 
 	}
 	
 	public void Hit(int damage)
@@ -25,14 +28,21 @@ public class ThingStats : MonoBehaviour
 		if (hp <= 0)
 			Die();
 	}
-	
+
+	private bool deaded = false;
 	public void Die()
 	{
+		if (deaded == true)
+			return;
+
 		Transform exp = ((GameObject)GameObject.Instantiate(explosion)).transform;
 		exp.position = this.transform.position;
 		exp.GetComponent<Detonator>().size = this.transform.localScale.x;
 		
 		//explode
-		Destroy(this.gameObject);
+		if (this.gameObject != Playerton.i.gameObject)
+			Destroy(this.gameObject);
+
+		deaded = true;
 	}
 }

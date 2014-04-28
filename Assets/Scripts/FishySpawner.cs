@@ -4,8 +4,7 @@ using System.Collections;
 public class FishySpawner : MonoBehaviour 
 {
 	public Transform Fishy;
-	
-	// Use this for initialization
+
 	void Start () 
 	{
 	
@@ -16,10 +15,5 @@ public class FishySpawner : MonoBehaviour
 			fishy.eulerAngles = new Vector3(Random.Range(-360, 360), Random.Range(-360, 360), Random.Range(-360, 360));
 			fishy.transform.localScale = new Vector3(Random.Range(1, 5), Random.Range(1, 5), Random.Range(1, 5));
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
