@@ -1416,6 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   manta: {fileID: 1941714583}
+  RestartTexture: {fileID: 2800000, guid: e31251800ac6e544eb51d4d71ae876d3, type: 3}
 --- !u!65 &117398120
 BoxCollider:
   m_ObjectHideFlags: 0
