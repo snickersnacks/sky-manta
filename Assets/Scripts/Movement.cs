@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour
 {
 	float slowrate = -5000;
 	float wateraccrate = 500;
-	float airaccrate = 1500;
+	float airaccrate = 400;
 	
 	// Update is called once per frame
 	bool wasinwater = false;
