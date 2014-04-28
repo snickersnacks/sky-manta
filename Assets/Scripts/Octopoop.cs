@@ -24,6 +24,7 @@ public class Octopoop : MonoBehaviour
 				Transform go = (Transform)GameObject.Instantiate(miniocto);
 				go.position = this.transform.position;
 				go.rotation = this.transform.rotation;
+				go.localScale *= Random.Range(1, 3);
 				go.rigidbody.AddRelativeForce(0, -2000, 0);
 				go.GetComponent<OctoMove>().Launch(3);
 			}

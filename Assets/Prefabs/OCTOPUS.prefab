@@ -2033,7 +2033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AmbientSpeed: 400
-  RotationSpeed: 200
+  RotationSpeed: 50
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

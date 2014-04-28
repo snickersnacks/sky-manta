@@ -14,7 +14,7 @@ public class FishySpawner : MonoBehaviour
 			fishy.position = new Vector3(Random.Range(-1000, 1000), Random.Range(-200, -25), Random.Range(-1000, 1000));
 			fishy.eulerAngles = new Vector3(Random.Range(-360, 360), Random.Range(-360, 360), Random.Range(-360, 360));
 
-			fishy.transform.localScale = Vector3.one * Random.Range(1, 5);
+			fishy.transform.localScale = Vector3.one * Random.Range(1, 10);
 		}
 	}
 }
