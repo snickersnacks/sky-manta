@@ -4396,6 +4396,13 @@ MonoBehaviour:
   EyeParts:
   - {fileID: 2053148066}
   - {fileID: 1176150789}
+  fireForTime: 2
+  fireCooldown: 5
+  nextFireTime: 0
+  stopFireAtTime: -1
+  startFireAtTime: 0
+  warningPeriod: 3
+  magic: 6
 --- !u!1 &1709611527
 GameObject:
   m_ObjectHideFlags: 0

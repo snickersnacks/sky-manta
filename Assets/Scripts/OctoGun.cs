@@ -19,10 +19,12 @@ public class OctoGun : MonoBehaviour
 	public float startFireAtTime = 0;
 	public float warningPeriod = 3;
 
+
+	public float magic = 1;
 	// Update is called once per frame
 	void Update () 
 	{
-		if (nextFireTime < Time.time && Vector3.Distance(this.transform.position, Playerton.i.transform.position) < 500)
+		if (nextFireTime < Time.time && Vector3.Distance(this.transform.position, Playerton.i.transform.position) < 1000)
 		{
 			if (stopFireAtTime == -1)
 			{
@@ -40,7 +42,11 @@ public class OctoGun : MonoBehaviour
 
 				foreach (Transform eye in Eyes)
 				{
+					Quaternion from = eye.rotation;
 					eye.LookAt(Playerton.i.transform);
+					Quaternion to = eye.rotation;
+
+					eye.rotation = Quaternion.Lerp(from, to, magic * Time.deltaTime);
 				}
 
 				foreach (ParticleSystem par in EyeParts)
@@ -64,6 +70,9 @@ public class OctoGun : MonoBehaviour
 			{
 				par.enableEmission = false;
 			}
+
+			foreach (Transform eye in Eyes)
+				eye.renderer.material.color = Color.black;
 		}
 	}
 }
