@@ -1,67 +1,20 @@
 fileFormatVersion: 2
-guid: f04c939296781b84fabaaee6eee47284
+guid: a028fe1b97b3ea9418c7fc61c43fc858
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Armature
-    100002: Bone_004
-    100004: Bone_005
-    100006: Bone_006
-    100008: Bone_007
-    100010: Bone_009
-    100012: Bone_010
-    100014: Bone_011
-    100016: Bone_012
-    100018: Bone_013
-    100020: Bone_014
-    100022: Bone_015
-    100024: Bone_016
-    100026: Bone_017
-    100028: Bone_018
-    100030: Bone_019
-    100032: Bone_020
-    100034: Bone_021
-    100036: Bone_022
-    100038: Bone_023
-    100040: Bone_024
-    100042: Bone_025
-    100044: Bone_026
-    100046: Bone_027
-    100048: Bone_028
-    100050: //RootNode
-    100052: ray
-    400000: Armature
-    400002: Bone_004
-    400004: Bone_005
-    400006: Bone_006
-    400008: Bone_007
-    400010: Bone_009
-    400012: Bone_010
-    400014: Bone_011
-    400016: Bone_012
-    400018: Bone_013
-    400020: Bone_014
-    400022: Bone_015
-    400024: Bone_016
-    400026: Bone_017
-    400028: Bone_018
-    400030: Bone_019
-    400032: Bone_020
-    400034: Bone_021
-    400036: Bone_022
-    400038: Bone_023
-    400040: Bone_024
-    400042: Bone_025
-    400044: Bone_026
-    400046: Bone_027
-    400048: Bone_028
-    400050: //RootNode
-    400052: ray
-    4300000: ray
-    7400000: Default Take
-    7400002: Swim
+    100000: Light
+    100002: 'Light #2'
+    100004: //RootNode
+    100006: octopus
+    400000: Light
+    400002: 'Light #2'
+    400004: //RootNode
+    400006: octopus
+    2300000: octopus
+    3300000: octopus
+    4300000: octopus
     9500000: //RootNode
-    13700000: ray
   materials:
     importMaterials: 1
     materialName: 0
