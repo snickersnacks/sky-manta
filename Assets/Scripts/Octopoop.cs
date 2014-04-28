@@ -15,16 +15,16 @@ public class Octopoop : MonoBehaviour
 	{
 		do
 		{
-			print ("waiting");
+			//print ("waiting");
 			yield return new WaitForSeconds(Random.Range(1, 10));
 
 			if (GameObject.FindGameObjectsWithTag("miniocto").Length < maxpoop)
 			{
-				print ("launching");
+				//print ("launching");
 				Transform go = (Transform)GameObject.Instantiate(miniocto);
 				go.position = this.transform.position;
 				go.rotation = this.transform.rotation;
-				go.rigidbody.AddRelativeForce(0, -1000, 0);
+				go.rigidbody.AddRelativeForce(0, -2000, 0);
 				go.GetComponent<OctoMove>().Launch(3);
 			}
 		} while (true);

@@ -7,6 +7,7 @@ public class Playerton : ThingStats
 
 	public Transform manta;
 
+	public Texture HPBar;
 	public Texture RestartTexture;
 	
 	void Awake()
@@ -33,6 +34,9 @@ public class Playerton : ThingStats
 
 	void OnGUI()
 	{
+		//Debug.Log(OctoGun.HPPercent());
+		GUI.Box(new Rect(Screen.width/2 - 600/2, 60, OctoGun.HPPercent() * 600, 40), RestartTexture);
+
 		if (deaded)
 		{
 			Screen.showCursor = true;

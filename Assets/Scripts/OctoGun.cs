@@ -4,8 +4,24 @@ using System.Linq;
 
 public class OctoGun : MonoBehaviour 
 {
+	public static OctoGun i;
+	public static ThingStats ostats;
+	public static float HPPercent()
+	{
+		if (ostats == null)
+			return 1;
+
+		return ostats.hpperc();
+	}
+
 	public Transform[] Eyes;
 	public ParticleSystem[] EyeParts;
+
+	void Awake()
+	{
+		i = this;
+		ostats = this.GetComponent<ThingStats>();
+	}
 
 	// Use this for initialization
 	void Start () 

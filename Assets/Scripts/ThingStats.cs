@@ -3,7 +3,19 @@ using System.Collections;
 
 public class ThingStats : MonoBehaviour 
 {
-	public int hp = 10;
+	private float maxhp = 10;
+	public float hp = 10;
+
+
+	void Awake()
+	{
+		maxhp = hp;
+	}
+
+	public float hpperc()
+	{
+		return hp / maxhp;
+	}
 	
 	private static GameObject _explosion;
 	public static GameObject explosion 

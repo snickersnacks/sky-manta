@@ -41,6 +41,9 @@ public class Bullet : MonoBehaviour
 
 		if (stats != null && stats.gameObject != Firererer)
 		{
+			if (Firererer != Playerton.i.gameObject && stats.gameObject != Playerton.i.gameObject) //deadline hax.
+				return;
+
 			stats.Hit(damage);
 			Destroy(this.gameObject);
 			deaded = true;
