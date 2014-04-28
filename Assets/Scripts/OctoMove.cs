@@ -14,7 +14,7 @@ public class OctoMove : MonoBehaviour
 	private float damping = 10f;
 
 	
-	private float distToShoot = 100f;
+	private float distToShoot = 300f;
 
 	private bool haslaunched = false; 
 
@@ -37,6 +37,7 @@ public class OctoMove : MonoBehaviour
 		{
 			Quaternion rotation = Quaternion.LookRotation(Playerton.i.transform.position - this.transform.position);
 			this.transform.rotation = Quaternion.Slerp(this.transform.rotation, rotation, Time.deltaTime * damping);
+			//this.transform.LookAt(Playerton.i.transform);
 		}
 		else
 		{
