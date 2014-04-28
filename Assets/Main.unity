@@ -1498,7 +1498,7 @@ GameObject:
   - 54: {fileID: 148653241}
   m_Layer: 0
   m_Name: Minipus
-  m_TagString: Untagged
+  m_TagString: miniocto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2234,7 +2234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &929521322
 Transform:
   m_ObjectHideFlags: 0
@@ -3141,6 +3141,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1695811709}
   - 95: {fileID: 1695811710}
+  - 114: {fileID: 1695811711}
   m_Layer: 0
   m_Name: OCTOPUS
   m_TagString: Untagged
@@ -3175,6 +3176,19 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!114 &1695811711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1695811708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df88adaead89b51418487acd0d6ed943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxpoop: 10
+  miniocto: {fileID: 400002, guid: 83200ef348b87654aaf5a572754fa185, type: 2}
 --- !u!1 &1709611527
 GameObject:
   m_ObjectHideFlags: 0

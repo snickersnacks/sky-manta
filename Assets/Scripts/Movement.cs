@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
 		//if (this.transform.position.y > 0)
 		//	this.rigidbody.velocity += Physics.gravity;
 		
-		Debug.Log("Speed: " + AmbientSpeed);	
+		//Debug.Log("Speed: " + AmbientSpeed);	
 	}
 
 	public Animator avataranim;

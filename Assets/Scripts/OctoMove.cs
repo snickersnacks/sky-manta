@@ -15,9 +15,24 @@ public class OctoMove : MonoBehaviour
 
 	
 	private float distToShoot = 100f;
-	
+
+	private bool haslaunched = false; 
+
+	public void Launch(float intime)
+	{
+		StartCoroutine(DoLaunch(intime));
+	}
+	private IEnumerator DoLaunch(float intime)
+	{
+		yield return new WaitForSeconds(intime);
+		haslaunched = true;
+	}
+
 	void Update () 
 	{
+		if (haslaunched == false)
+			return;
+
 		if (Vector3.Distance(Playerton.i.transform.position, this.transform.position) < distToShoot)
 		{
 			Quaternion rotation = Quaternion.LookRotation(Playerton.i.transform.position - this.transform.position);
