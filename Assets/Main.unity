@@ -2330,7 +2330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaserBeam: {fileID: 400000, guid: 4570c4d95c5020a4cafb95fde2157288, type: 2}
-  ChargeBeam: {fileID: 400000, guid: b822091c2311ded4d841306a225e859f, type: 2}
+  ChargeBeam: {fileID: 400000, guid: 476f2a1df8bb2114fadd47f9f75eb685, type: 2}
 --- !u!82 &1609224819
 AudioSource:
   m_ObjectHideFlags: 0

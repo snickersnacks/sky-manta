@@ -30,6 +30,8 @@ public class MouseLook : MonoBehaviour {
 
 	float rotationY = 0F;
 
+	float magic = 20f;
+
 	void Update ()
 	{
 		if (axes == RotationAxes.MouseXAndY)
@@ -38,19 +40,28 @@ public class MouseLook : MonoBehaviour {
 			
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			
+
+			Quaternion from = transform.rotation;
 			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+			Quaternion to = transform.rotation;
+			transform.rotation = Quaternion.Lerp(from, to, magic * Time.deltaTime);
 		}
 		else if (axes == RotationAxes.MouseX)
 		{
+			Quaternion from = transform.rotation;
 			transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+			Quaternion to = transform.rotation;
+			transform.rotation = Quaternion.Lerp(from, to, magic * Time.deltaTime);
 		}
 		else
 		{
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
+			Quaternion from = transform.rotation;
 			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+			Quaternion to = transform.rotation;
+			transform.rotation = Quaternion.Lerp(from, to, magic * Time.deltaTime);
 		}
 	}
 	

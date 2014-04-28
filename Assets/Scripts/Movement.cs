@@ -3,31 +3,47 @@ using System.Collections;
 
 public class Movement : MonoBehaviour 
 {
-	float slowrate = -50;
-	float wateraccrate = 50;
-	float airaccrate = 150;
+	float slowrate = -5000;
+	float wateraccrate = 500;
+	float airaccrate = 1500;
 	
 	// Update is called once per frame
+	bool wasinwater = false;
 	void Update () 
 	{
 		float change;
+
+		bool inwater = false;
 		
 		//if they're under water
 		if (this.transform.position.y < 0)
 		{
-			if (AmbientSpeed > 100) //if we're going faster than 100, slow down
+			inwater = true;
+
+			if (AmbientSpeed > 1000) //if we're going faster than 100, slow down
 				change = slowrate;
 			else //if we're going slower than 100, speed up
 				change = wateraccrate;
 		}
 		else //if they're in the air
 		{
+			inwater = false;
 			change = airaccrate;
 		}
+
+		if (inwater != wasinwater)
+			change *= 50;
+
+		wasinwater = inwater;
 		
 		change *= Time.deltaTime;
 		AmbientSpeed += change;
-		
+
+		if (AmbientSpeed < 200)
+			AmbientSpeed = 200;
+
+		this.audio.pitch = AmbientSpeed / 5000;
+
 		float mul = AmbientSpeed / BaseAmbientSpeed;
 		this.particleSystem.emissionRate = mul * BasePartRate;
 		this.particleSystem.startSpeed = mul * BasePartSpeed;
@@ -37,7 +53,7 @@ public class Movement : MonoBehaviour
 		//if (this.transform.position.y > 0)
 		//	this.rigidbody.velocity += Physics.gravity;
 		
-		//Debug.Log("Speed: " + AmbientSpeed);	
+		Debug.Log("Speed: " + AmbientSpeed);	
 	}
 	
 	public float BasePartRate = 100f;

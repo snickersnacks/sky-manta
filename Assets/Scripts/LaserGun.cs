@@ -27,7 +27,7 @@ public class LaserGun : Gun
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetButton("Fire2"))
+		if (Input.GetButtonDown("Fire2"))
 		{
 			if (chargeEnd == float.MaxValue && nextfire < Time.time)
 			{
@@ -41,17 +41,17 @@ public class LaserGun : Gun
 				currentCharge.GetComponent<Bullet>().Firererer = this.GetStatsObject();
 				currentCharge.parent = this.transform;
 				currentCharge.localPosition = Vector3.zero;
-				currentCharge.localScale = Vector3.one * 0.1f;
+				currentCharge.localScale = Vector3.one * (50f * 0.1f);
+			}
+		}
+
+			if (chargeEnd != float.MaxValue && chargeEnd > Time.time && currentCharge != null)
+			{
+				currentCharge.localScale = Vector3.one * (50f * (Time.time - chargeStart));
 			}
 
-			if (chargeEnd != float.MaxValue && chargeEnd > Time.time)
-			{
-				currentCharge.localScale = Vector3.one * 10f * (Time.time - chargeStart);
-				Debug.Log(currentCharge.localScale);
-			}
-
-			if (chargeEnd < Time.time)
-			{
+		if (Input.GetButtonUp("Fire2") && currentCharge != null)
+		{
 				print ("FIRING");
 				this.audio.time = longtime;
 				this.audio.Play();
@@ -66,7 +66,6 @@ public class LaserGun : Gun
 				chargeEnd = float.MaxValue;
 				chargeStart = -1;
 				currentCharge = null;
-			}
 		}
 		else if (Input.GetButtonUp("Fire2"))
 		{

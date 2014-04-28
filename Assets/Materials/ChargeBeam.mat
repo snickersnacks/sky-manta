@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: ChargeBeam
-  m_Shader: {fileID: 4800000, guid: 994451becc5853c4a88604e368db8b6a, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1ffd39b3e33a04094a482b549da5c0f7, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,10 +17,63 @@ Material:
         first:
           name: _MainTex
         second:
+          m_Texture: {fileID: 2800000, guid: 1073c04a1a76c3f409a49905994250e3, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ColorBand
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _FlowTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 9f2f819c833c8a3429cf02a570d4d221, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _FlowMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 25b74dfb652dbcb4286211f74871b097, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Noise
+        second:
+          m_Texture: {fileID: 2800000, guid: 51c6c820cee14fc44aae3558c561ee8d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RampTex
+        second:
           m_Texture: {fileID: 2800000, guid: 4ffeaab9494c1d9418d31cd88f8b2492, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
+      data:
+        first:
+          name: _Emission
+        second: .571428597
       data:
         first:
           name: _InnerValue
@@ -37,8 +90,52 @@ Material:
         first:
           name: _MetaballAlpha
         second: .553571403
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+          name: _Strength
+        second: 0
+      data:
+        first:
+          name: _Heat
+        second: 1
+      data:
+        first:
+          name: _Radius
+        second: 1
+      data:
+        first:
+          name: _NoiseFrequency
+        second: 1
+      data:
+        first:
+          name: _ScrollSpeed
+        second: 1
+      data:
+        first:
+          name: _Alpha
+        second: 1
+      data:
+        first:
+          name: _Frequency
+        second: 1
     m_Colors:
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _BaseColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _FlowColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpherePos
+        second: {r: 0, g: 0, b: 0, a: 0}
