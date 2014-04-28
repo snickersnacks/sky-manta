@@ -10,8 +10,8 @@ Material:
   m_Shader: {fileID: 4800000, guid: 1ffd39b3e33a04094a482b549da5c0f7, type: 3}
   m_ShaderKeywords:
   - SCATTERING_ON
-  - OCTAVES_2
-  - QUALITY_LOW
+  - OCTAVES_4
+  - QUALITY_HIGH
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -55,15 +55,15 @@ Material:
         second: .997594535
       data:
         first:
-          name: _ScrollSpeed
-        second: 0
-      data:
-        first:
-          name: _Alpha
+          name: _Frequency
         second: 1
       data:
         first:
-          name: _Frequency
+          name: _ScrollSpeed
+        second: 1
+      data:
+        first:
+          name: _Alpha
         second: 1
     m_Colors:
       data:

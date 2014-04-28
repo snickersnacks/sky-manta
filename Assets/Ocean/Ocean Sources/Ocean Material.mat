@@ -112,11 +112,11 @@ Material:
       data:
         first:
           name: _SurfaceColor
-        second: {r: .300000012, g: .5, b: .300000012, a: 1}
+        second: {r: .143851623, g: .755520463, b: .917910457, a: 1}
       data:
         first:
           name: _WaterColor
-        second: {r: .300000012, g: .400000006, b: .300000012, a: 1}
+        second: {r: .671641827, g: 1, b: .848450005, a: 1}
       data:
         first:
           name: _Size
