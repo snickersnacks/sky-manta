@@ -71,7 +71,7 @@ public class OctoGun : MonoBehaviour
 					eye.rotation = Quaternion.Lerp(from, to, magic * Time.deltaTime);
 					
 					Ray ray = new Ray(eye.transform.position, eye.transform.TransformDirection(Vector3.forward));
-					RaycastHit[] hits = Physics.SphereCastAll(ray, 6, 5000);
+					RaycastHit[] hits = Physics.SphereCastAll(ray, 6, 5000, 1 << 8);
 					bool didhit = hits.Any(hit => hit.collider.gameObject == Playerton.i.gameObject);
 
 					if (didhit && Playerton.i.transform.position.y > 0)

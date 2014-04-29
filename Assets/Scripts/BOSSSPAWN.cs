@@ -32,7 +32,7 @@ public class BOSSSPAWN : MonoBehaviour
 
 	void OnGUI()
 	{
-		if (Time.realtimeSinceStartup < TimeToSpawn)
-			GUI.Label(new Rect(0, 0, 30, 30), ((int)(TimeToSpawn - Time.realtimeSinceStartup)).ToString());
+		//if (Time.realtimeSinceStartup < TimeToSpawn)
+		//	GUI.Label(new Rect(0, 0, 30, 30), ((int)(TimeToSpawn - Time.realtimeSinceStartup)).ToString());
 	}
 }

@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour
 {
 	float slowrate = -2000;
 	float wateraccrate = 500;
-	float airaccrate = 400;
+	float airaccrate = 500;
 	
 	// Update is called once per frame
 	bool wasinwater = false;
@@ -32,16 +32,17 @@ public class Movement : MonoBehaviour
 		}
 
 		if (inwater != wasinwater)
-			change *= 50;
+			change *= 60;
 
 		wasinwater = inwater;
 		
 		change *= Time.deltaTime;
 		AmbientSpeed += change;
 
-		if (AmbientSpeed < 200)
-			AmbientSpeed = 200;
+		if (AmbientSpeed < 700)
+			AmbientSpeed = 700;
 
+		this.audio.volume = 1.25f;
 		this.audio.pitch = AmbientSpeed / 5000;
 		avataranim.speed = this.audio.pitch;
 
@@ -60,7 +61,7 @@ public class Movement : MonoBehaviour
 	public Animator avataranim;
 	
 	public float BasePartRate = 100f;
-	public float BasePartSpeed = -5;
+	public float BasePartSpeed = -3;
 	public float BaseAmbientSpeed = 100.0f;
 	public float AmbientSpeed = 100.0f;
 

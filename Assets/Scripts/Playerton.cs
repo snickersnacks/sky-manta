@@ -18,6 +18,7 @@ public class Playerton : ThingStats
 	public GameObject deadsound;
 	public GameObject music;
 
+	public GUISkin BLOODSKIN;
 
 	void Awake()
 	{
@@ -66,7 +67,7 @@ public class Playerton : ThingStats
 
 	void OnGUI()
 	{
-		GUI.skin = new GUISkin();
+		GUI.skin = BLOODSKIN;
 		GUI.skin.box = new GUIStyle();
 		GUI.skin.box.alignment = TextAnchor.MiddleCenter;
 		GUI.skin.box.fontSize = 20;
@@ -87,7 +88,7 @@ public class Playerton : ThingStats
 		if (OctoGun.i != null)
 		{
 			//Debug.Log(OctoGun.HPPercent());
-			GUI.Box(new Rect(Screen.width/2 - 1005/2, 60, 1005, 131), HPBar);
+			GUI.DrawTexture(new Rect(Screen.width/2 - 1005/2, 60, 1005, 131), HPBar);
 
 			//player
 			GUI.DrawTexture(new Rect(Screen.width/2 - 1005/2 + 181, 62, this.hpperc() * 320, 59), HealthTexture);
@@ -99,6 +100,7 @@ public class Playerton : ThingStats
 
 		if (deaded)
 		{
+			Screen.lockCursor = false;
 			Screen.showCursor = true;
 			if (GUI.Button(new Rect(Screen.width/2 - 800/2, Screen.height/2 - 400/2, 800, 400), RestartTexture))
 			{

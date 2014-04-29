@@ -1983,7 +1983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d63e3c776ecfc54ba69351b14da56ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 50
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2002,12 +2002,12 @@ MonoBehaviour:
   - {fileID: 19800002}
   - {fileID: 19800000}
   fireForTime: 2
-  fireCooldown: 5
+  fireCooldown: 6
   nextFireTime: 0
   stopFireAtTime: -1
   startFireAtTime: 0
   warningPeriod: 3
-  magic: 6
+  magic: 11
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2033,7 +2033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AmbientSpeed: 400
-  RotationSpeed: 50
+  RotationSpeed: 30
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

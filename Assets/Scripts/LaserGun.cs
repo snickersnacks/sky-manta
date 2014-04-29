@@ -52,7 +52,7 @@ public class LaserGun : Gun
 
 		if (Input.GetButtonUp("Fire2") && currentCharge != null)
 		{
-				print ("FIRING");
+				//print ("FIRING");
 				this.audio.time = longtime;
 				this.audio.Play();
 				currentCharge.parent = null;
@@ -79,7 +79,7 @@ public class LaserGun : Gun
 			{
 				StartCoroutine(FireShot(0.01f));
 				StartCoroutine(FireShot(0.1f));
-				//nextfire = Time.time + delay;
+				nextfire = Time.time + delay;
 			}
 		}
 	}

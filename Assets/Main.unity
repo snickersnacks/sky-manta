@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 70506816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 113973938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - 114: {fileID: 117398119}
   - 82: {fileID: 117398121}
   - 65: {fileID: 117398120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avataranim: {fileID: 1941714584}
   BasePartRate: 100
-  BasePartSpeed: -5
+  BasePartSpeed: -3
   BaseAmbientSpeed: 100
   AmbientSpeed: 100
   RotationSpeed: 200
@@ -1532,6 +1532,7 @@ MonoBehaviour:
   WinTexture: {fileID: 2800000, guid: 448b6b64840db5e4e9f6235b3e6871b7, type: 3}
   deadsound: {fileID: 1578920473}
   music: {fileID: 2026724755}
+  BLOODSKIN: {fileID: 11400000, guid: 203e463bafc6ea74997d7452f212c749, type: 2}
 --- !u!65 &117398120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1664,7 +1665,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 181315945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1690,7 +1691,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 192440870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2030,7 +2031,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 445075049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2112,7 +2113,7 @@ GameObject:
   - 4: {fileID: 520271595}
   - 114: {fileID: 520271596}
   - 82: {fileID: 520271597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2265,7 +2266,7 @@ GameObject:
   - 65: {fileID: 610456704}
   - 23: {fileID: 610456703}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2712,7 +2713,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 682440024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2914,7 +2915,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 705347973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2941,7 +2942,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 754763056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3013,7 +3014,7 @@ GameObject:
   - 124: {fileID: 788644828}
   - 81: {fileID: 788644827}
   - 114: {fileID: 788644832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -3317,7 +3318,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 841613261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3348,7 +3349,7 @@ GameObject:
   - 65: {fileID: 847476060}
   - 23: {fileID: 847476059}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3467,7 +3468,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 899938247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3700,7 +3701,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1045773431}
   - 137: {fileID: 1045773432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3974,7 +3975,7 @@ GameObject:
   - 65: {fileID: 1133455897}
   - 23: {fileID: 1133455896}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4039,7 +4040,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1201532082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4092,7 +4093,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1207225203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4119,7 +4120,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1230030617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4304,7 +4305,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1347811703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4558,7 +4559,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1434937362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4740,7 +4741,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1527436932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4853,7 +4854,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1578920474}
   - 82: {fileID: 1578920475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Deathsound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4942,7 +4943,7 @@ GameObject:
   - 23: {fileID: 1609224815}
   - 114: {fileID: 1609224818}
   - 82: {fileID: 1609224819}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LaserGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4955,7 +4956,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1609224813}
-  m_LocalRotation: {x: .872438371, y: 0, z: 0, w: .488724321}
+  m_LocalRotation: {x: .823722422, y: -1.53143151e-08, z: -1.86047426e-08, w: .566993356}
   m_LocalPosition: {x: .0450185537, y: .226975739, z: 1.35153198}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
@@ -5079,7 +5080,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1612033112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5133,7 +5134,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1709611528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5248,7 +5249,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1770271829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5302,7 +5303,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1789606943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5542,7 +5543,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1935294776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5572,7 +5573,7 @@ GameObject:
   - 65: {fileID: 1939911687}
   - 23: {fileID: 1939911686}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5665,7 +5666,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1941714583}
   - 95: {fileID: 1941714584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: manta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5679,7 +5680,7 @@ Transform:
   m_PrefabInternal: {fileID: 1942368332}
   m_GameObject: {fileID: 1941714582}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.12729466, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1230030617}
@@ -5713,7 +5714,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -.12729466
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5739,6 +5740,114 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ffb911330a7b9b448a789a021e902a9d, type: 2}
+    - target: {fileID: 100022, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100052, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dda86e4640396d0478c797565d7d2d72, type: 3}
   m_RootGameObject: {fileID: 1941714582}
@@ -5752,7 +5861,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1952801681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5833,7 +5942,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1991524572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5991,7 +6100,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2026724756}
   - 82: {fileID: 2026724757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muzik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6154,7 +6263,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2076812601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6181,7 +6290,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2131123622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}

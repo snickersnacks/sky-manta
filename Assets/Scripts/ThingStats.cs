@@ -35,7 +35,7 @@ public class ThingStats : MonoBehaviour
 	{
 		hp -= damage;
 		
-		Debug.Log("Hit for " + damage + " damage. HP: " + hp);
+		//Debug.Log("Hit for " + damage + " damage. HP: " + hp);
 		
 		if (hp <= 0)
 			Die();
@@ -54,7 +54,7 @@ public class ThingStats : MonoBehaviour
 		//destroy
 		if (this.gameObject == Playerton.i.gameObject)
 			Playerton.i.DieDie();
-		else if (this.gameObject == OctoGun.i.gameObject)
+		else if (OctoGun.i != null && this.gameObject == OctoGun.i.gameObject)
 			Playerton.i.Win();
 		else
 		{
