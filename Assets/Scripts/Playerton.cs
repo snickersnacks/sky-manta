@@ -10,7 +10,10 @@ public class Playerton : ThingStats
 	public Texture HPBar;
 	public Texture RestartTexture;
 	public Texture HealthTexture;
-	
+
+	public GameObject deadsound;
+	public GameObject music;
+
 	void Awake()
 	{
 		i = this;
@@ -29,6 +32,8 @@ public class Playerton : ThingStats
 
 	public void DieDie()
 	{
+		Destroy(music);
+		deadsound.audio.Play();
 		hp = 0;
 		this.GetComponent<Movement>().enabled = false;
 		this.GetComponent<ParticleSystem>().enableEmission = false;
@@ -39,16 +44,18 @@ public class Playerton : ThingStats
 	{
 		GUI.skin = new GUISkin();
 
+		if (OctoGun.i != null)
+		{
+			//Debug.Log(OctoGun.HPPercent());
+			GUI.Box(new Rect(Screen.width/2 - 1005/2, 60, 1005, 131), HPBar);
 
-		//Debug.Log(OctoGun.HPPercent());
-		GUI.Box(new Rect(Screen.width/2 - 1005/2, 60, 1005, 131), HPBar);
+			//player
+			GUI.DrawTexture(new Rect(Screen.width/2 - 1005/2 + 181, 62, this.hpperc() * 320, 59), HealthTexture);
 
-		//player
-		GUI.DrawTexture(new Rect(Screen.width/2 - 1005/2 + 181, 62, this.hpperc() * 322, 59), HealthTexture);
-
-		//octo
-		float octowidth = OctoGun.HPPercent() * 322;
-		GUI.DrawTexture(new Rect(Screen.width/2 + 1005/2 - 181 - octowidth, 62, octowidth, 59), HealthTexture);
+			//octo
+			float octowidth = OctoGun.HPPercent() * 320;
+			GUI.DrawTexture(new Rect(Screen.width/2 + 1005/2 - 181 - octowidth, 62, octowidth, 59), HealthTexture);
+		}
 
 		if (deaded)
 		{
