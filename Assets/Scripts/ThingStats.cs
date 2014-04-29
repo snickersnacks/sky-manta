@@ -55,7 +55,10 @@ public class ThingStats : MonoBehaviour
 		if (this.gameObject == Playerton.i.gameObject)
 			Playerton.i.DieDie();
 		else if (OctoGun.i != null && this.gameObject == OctoGun.i.gameObject)
+		{
 			Playerton.i.Win();
+			Destroy(this.gameObject);
+		}
 		else
 		{
 			Playerton.points += Random.Range(20, 90);

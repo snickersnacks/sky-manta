@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc95bb2344f4db42bc1e036ef0480d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmbientSpeed: 400
+  AmbientSpeed: 1500
   RotationSpeed: 5
 --- !u!114 &11400004
 MonoBehaviour:

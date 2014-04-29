@@ -48,8 +48,13 @@ public class Playerton : ThingStats
 	private bool winnrar = false;
 	public void Win()
 	{
+		Screen.lockCursor = false;
+		Screen.showCursor = true;
+
 		points += 1000000;
 		winnrar = true;
+
+		wintimebuttonpoop = Time.time + 2;
 	}
 
 	public void DieDie()
@@ -64,6 +69,8 @@ public class Playerton : ThingStats
 		this.GetComponent<ParticleSystem>().enableEmission = false;
 		Destroy(manta.gameObject);
 	}
+
+	private float wintimebuttonpoop = float.MaxValue;
 
 	void OnGUI()
 	{
@@ -81,7 +88,15 @@ public class Playerton : ThingStats
 
 		if (winnrar)
 		{
-			GUI.DrawTexture(new Rect(Screen.width/2 - WinTexture.width/2, Screen.height/2 - WinTexture.height/2, WinTexture.width, WinTexture.height), WinTexture);
+			if (GUI.Button(new Rect(Screen.width/2 - WinTexture.width/2, Screen.height/2 - WinTexture.height/2, WinTexture.width, WinTexture.height), WinTexture))
+			{
+				if (wintimebuttonpoop < Time.time)
+				{
+					Screen.showCursor = false;
+					Playerton.points = 0;
+					Application.LoadLevel(0);
+				}
+			}
 			return;
 		}
 

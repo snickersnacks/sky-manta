@@ -79,7 +79,7 @@ public class LaserGun : Gun
 			{
 				StartCoroutine(FireShot(0.01f));
 				StartCoroutine(FireShot(0.1f));
-				nextfire = Time.time + delay;
+				// nextfire = Time.time + delay;
 			}
 		}
 	}

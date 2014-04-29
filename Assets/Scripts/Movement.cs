@@ -4,8 +4,8 @@ using System.Collections;
 public class Movement : MonoBehaviour 
 {
 	float slowrate = -2000;
-	float wateraccrate = 500;
-	float airaccrate = 500;
+	float wateraccrate = 700;
+	float airaccrate = 700;
 	
 	// Update is called once per frame
 	bool wasinwater = false;
@@ -39,8 +39,8 @@ public class Movement : MonoBehaviour
 		change *= Time.deltaTime;
 		AmbientSpeed += change;
 
-		if (AmbientSpeed < 700)
-			AmbientSpeed = 700;
+		if (AmbientSpeed < 1500)
+			AmbientSpeed = 1500;
 
 		this.audio.volume = 1.25f;
 		this.audio.pitch = AmbientSpeed / 5000;
@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
 		//if (this.transform.position.y > 0)
 		//	this.rigidbody.velocity += Physics.gravity;
 		
-		//Debug.Log("Speed: " + AmbientSpeed);	
+		Debug.Log("Speed: " + AmbientSpeed);	
 	}
 
 	public Animator avataranim;
