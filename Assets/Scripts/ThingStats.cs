@@ -51,9 +51,12 @@ public class ThingStats : MonoBehaviour
 		exp.position = this.transform.position;
 		exp.GetComponent<Detonator>().size = this.transform.localScale.x;
 		
-		//explode
+		//destroy
 		if (this.gameObject != Playerton.i.gameObject)
+		{
+			Playerton.points += Random.Range(20, 90);
 			Destroy(this.gameObject);
+		}
 		else
 			Playerton.i.DieDie();
 

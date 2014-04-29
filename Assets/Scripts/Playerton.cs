@@ -5,14 +5,18 @@ public class Playerton : ThingStats
 {
 	public static Playerton i;
 
+	public static int points = 0;
+
 	public Transform manta;
 
 	public Texture HPBar;
 	public Texture RestartTexture;
 	public Texture HealthTexture;
+	public Texture PointsBG;
 
 	public GameObject deadsound;
 	public GameObject music;
+
 
 	void Awake()
 	{
@@ -43,6 +47,16 @@ public class Playerton : ThingStats
 	void OnGUI()
 	{
 		GUI.skin = new GUISkin();
+		GUI.skin.box = new GUIStyle();
+		GUI.skin.box.alignment = TextAnchor.MiddleCenter;
+		GUI.skin.box.fontSize = 20;
+		GUI.skin.box.fontStyle = FontStyle.Bold;
+
+
+		GUI.color = new Color(1, 1, 1, 0.3f);
+		GUI.DrawTexture(new Rect(Screen.width/2 - 100/2, 10, 100, 40), PointsBG);
+		GUI.color = new Color(1, 1, 1, 1f);
+		GUI.Box(new Rect(Screen.width/2 - 100/2, 10, 100, 40), points.ToString());
 
 		if (OctoGun.i != null)
 		{
