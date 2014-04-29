@@ -30,12 +30,15 @@ public class Playerton : ThingStats
 	
 	void Update()
 	{
+		if (Input.GetMouseButtonDown(0))
+			Screen.lockCursor = true;
+
 		if (Input.GetKeyUp(KeyCode.Escape))
 		{
 			Screen.lockCursor = !Screen.lockCursor;
 		}
 
-		if (this.transform.position.y <= 0)
+		if (Camera.main.transform.position.y <= 0)
 			UnderwaterEffect.Instance.enabled = true;
 		else
 			UnderwaterEffect.Instance.enabled = false;
