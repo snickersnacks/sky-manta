@@ -13,6 +13,7 @@ public class Playerton : ThingStats
 	public Texture RestartTexture;
 	public Texture HealthTexture;
 	public Texture PointsBG;
+	public Texture WinTexture;
 
 	public GameObject deadsound;
 	public GameObject music;
@@ -22,20 +23,36 @@ public class Playerton : ThingStats
 	{
 		i = this;
 
-		Screen.showCursor = false;
+		Screen.lockCursor = true;
+		//Screen.showCursor = false;
 		//GUIStyle generic_style = new GUIStyle();
 	}
 	
 	void Update()
 	{
+		if (Input.GetKeyUp(KeyCode.Escape))
+		{
+			Screen.lockCursor = !Screen.lockCursor;
+		}
+
 		if (this.transform.position.y <= 0)
 			UnderwaterEffect.Instance.enabled = true;
 		else
 			UnderwaterEffect.Instance.enabled = false;
 	}
 
+	private bool winnrar = false;
+	public void Win()
+	{
+		points += 1000000;
+		winnrar = true;
+	}
+
 	public void DieDie()
 	{
+		if (winnrar)
+			return;
+
 		Destroy(music);
 		deadsound.audio.Play();
 		hp = 0;
@@ -58,6 +75,12 @@ public class Playerton : ThingStats
 		GUI.color = new Color(1, 1, 1, 1f);
 		GUI.Box(new Rect(Screen.width/2 - 100/2, 10, 100, 40), points.ToString());
 
+		if (winnrar)
+		{
+			GUI.DrawTexture(new Rect(Screen.width/2 - WinTexture.width/2, Screen.height/2 - WinTexture.height/2, WinTexture.width, WinTexture.height), WinTexture);
+			return;
+		}
+
 		if (OctoGun.i != null)
 		{
 			//Debug.Log(OctoGun.HPPercent());
@@ -77,8 +100,11 @@ public class Playerton : ThingStats
 			if (GUI.Button(new Rect(Screen.width/2 - 800/2, Screen.height/2 - 400/2, 800, 400), RestartTexture))
 			{
 				Screen.showCursor = false;
+				Playerton.points = 0;
 				Application.LoadLevel(0);
 			}
 		}
+
+
 	}
 }

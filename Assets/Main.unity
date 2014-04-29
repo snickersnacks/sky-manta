@@ -1529,6 +1529,7 @@ MonoBehaviour:
   RestartTexture: {fileID: 2800000, guid: e4e2d390b73d9b544ab3c38926b15420, type: 3}
   HealthTexture: {fileID: 2800000, guid: 396b608d8413f744b9bd398f313bc711, type: 3}
   PointsBG: {fileID: 2800000, guid: 3662f09b0e082b0448e031ec82103f58, type: 3}
+  WinTexture: {fileID: 2800000, guid: 448b6b64840db5e4e9f6235b3e6871b7, type: 3}
   deadsound: {fileID: 1578920473}
   music: {fileID: 2026724755}
 --- !u!65 &117398120
@@ -4449,7 +4450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d63e3c776ecfc54ba69351b14da56ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 4
 --- !u!54 &1400008885
 Rigidbody:
   m_ObjectHideFlags: 0

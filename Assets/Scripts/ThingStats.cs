@@ -52,13 +52,15 @@ public class ThingStats : MonoBehaviour
 		exp.GetComponent<Detonator>().size = this.transform.localScale.x;
 		
 		//destroy
-		if (this.gameObject != Playerton.i.gameObject)
+		if (this.gameObject == Playerton.i.gameObject)
+			Playerton.i.DieDie();
+		else if (this.gameObject == OctoGun.i.gameObject)
+			Playerton.i.Win();
+		else
 		{
 			Playerton.points += Random.Range(20, 90);
 			Destroy(this.gameObject);
 		}
-		else
-			Playerton.i.DieDie();
 
 		deaded = true;
 	}
