@@ -18,7 +18,7 @@ public class BOSSSPAWN : MonoBehaviour
 		Transform boss = (Transform)GameObject.Instantiate(BOSS);
 		boss.GetComponent<ThingStats>().enabled = true;
 		boss.position = new Vector3(Random.Range(-750, 750), -200, Random.Range(-750, 750));
-		boss.rigidbody.AddRelativeForce(0, 2000, 0);
+		boss.rigidbody.AddRelativeForce(0, 3000, 0);
 
 		yield return new WaitForSeconds(5);
 		

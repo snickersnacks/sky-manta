@@ -371,6 +371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 520271595}
+  - {fileID: 1578920474}
   - {fileID: 1609224814}
   - {fileID: 788644831}
   - {fileID: 1941714583}
@@ -1527,6 +1528,8 @@ MonoBehaviour:
   HPBar: {fileID: 2800000, guid: aafb1e29618336a4581e56641cedda2b, type: 3}
   RestartTexture: {fileID: 2800000, guid: e4e2d390b73d9b544ab3c38926b15420, type: 3}
   HealthTexture: {fileID: 2800000, guid: 396b608d8413f744b9bd398f313bc711, type: 3}
+  deadsound: {fileID: 1578920473}
+  music: {fileID: 2026724755}
 --- !u!65 &117398120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4632,6 +4635,91 @@ MeshFilter:
   m_PrefabInternal: {fileID: 783372446}
   m_GameObject: {fileID: 1578889591}
   m_Mesh: {fileID: 4300002, guid: f8ad35970adb7b9418c4071f032ebb73, type: 3}
+--- !u!1 &1578920473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1578920474}
+  - 82: {fileID: 1578920475}
+  m_Layer: 0
+  m_Name: Deathsound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1578920474
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578920473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.820751131, z: -355.191956}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 117398113}
+--- !u!82 &1578920475
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578920473}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: a3332dfc2075d6f479f8ae33d4583d37, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1609224813
 GameObject:
   m_ObjectHideFlags: 0
