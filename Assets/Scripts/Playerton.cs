@@ -9,12 +9,14 @@ public class Playerton : ThingStats
 
 	public Texture HPBar;
 	public Texture RestartTexture;
+	public Texture HealthTexture;
 	
 	void Awake()
 	{
 		i = this;
 
 		Screen.showCursor = false;
+		//GUIStyle generic_style = new GUIStyle();
 	}
 	
 	void Update()
@@ -27,6 +29,7 @@ public class Playerton : ThingStats
 
 	public void DieDie()
 	{
+		hp = 0;
 		this.GetComponent<Movement>().enabled = false;
 		this.GetComponent<ParticleSystem>().enableEmission = false;
 		Destroy(manta.gameObject);
@@ -34,8 +37,18 @@ public class Playerton : ThingStats
 
 	void OnGUI()
 	{
+		GUI.skin = new GUISkin();
+
+
 		//Debug.Log(OctoGun.HPPercent());
-		GUI.Box(new Rect(Screen.width/2 - 600/2, 60, OctoGun.HPPercent() * 600, 40), RestartTexture);
+		GUI.Box(new Rect(Screen.width/2 - 1005/2, 60, 1005, 131), HPBar);
+
+		//player
+		GUI.DrawTexture(new Rect(Screen.width/2 - 1005/2 + 181, 62, this.hpperc() * 322, 59), HealthTexture);
+
+		//octo
+		float octowidth = OctoGun.HPPercent() * 322;
+		GUI.DrawTexture(new Rect(Screen.width/2 + 1005/2 - 181 - octowidth, 62, octowidth, 59), HealthTexture);
 
 		if (deaded)
 		{
