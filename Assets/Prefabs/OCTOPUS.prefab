@@ -2006,7 +2006,7 @@ MonoBehaviour:
   nextFireTime: 0
   stopFireAtTime: -1
   startFireAtTime: 0
-  warningPeriod: 3
+  warningPeriod: 4
   magic: 9
 --- !u!114 &11400004
 MonoBehaviour:

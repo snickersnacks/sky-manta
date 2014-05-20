@@ -69,16 +69,16 @@ public class Movement : MonoBehaviour
 
 	void UpdateFunction()
     {        
-		Quaternion AddRot = Quaternion.identity;
+		/*Quaternion AddRot = Quaternion.identity;
         float roll = 0;
         float pitch = 0;
         float yaw = 0;
-        roll = Input.GetAxis("Roll") * (Time.deltaTime * RotationSpeed);
-        pitch = Input.GetAxis("Pitch") * (Time.deltaTime * RotationSpeed);
-        yaw = Input.GetAxis("Yaw") * (Time.deltaTime * RotationSpeed);
+        roll = Input.GetAxis("Horizontal") * (Time.deltaTime * RotationSpeed);
+        pitch = Input.GetAxis("Vertical") * (Time.deltaTime * RotationSpeed);
+        //yaw = Input.GetAxis("Yaw") * (Time.deltaTime * RotationSpeed);
         
 		AddRot.eulerAngles = new Vector3(-pitch, yaw, -roll);
-        this.rigidbody.rotation *= AddRot;
+        this.rigidbody.rotation *= AddRot;*/
         
 		Vector3 AddPos = Vector3.forward;
         AddPos = this.rigidbody.rotation * AddPos;

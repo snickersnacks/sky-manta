@@ -24,20 +24,20 @@ public class Playerton : ThingStats
 	{
 		i = this;
 
-		Screen.lockCursor = true;
+		//Screen.lockCursor = true;
 		//Screen.showCursor = false;
 		//GUIStyle generic_style = new GUIStyle();
 	}
 	
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(0))
+		/*if (Input.GetMouseButtonDown(0))
 			Screen.lockCursor = true;
 
 		if (Input.GetKeyUp(KeyCode.Escape))
 		{
 			Screen.lockCursor = !Screen.lockCursor;
-		}
+		}*/
 
 		if (Camera.main.transform.position.y <= 0)
 			UnderwaterEffect.Instance.enabled = true;
@@ -48,8 +48,8 @@ public class Playerton : ThingStats
 	private bool winnrar = false;
 	public void Win()
 	{
-		Screen.lockCursor = false;
-		Screen.showCursor = true;
+		//Screen.lockCursor = false;
+		//Screen.showCursor = true;
 
 		points += 1000000;
 		winnrar = true;

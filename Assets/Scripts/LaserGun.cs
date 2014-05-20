@@ -7,7 +7,7 @@ public class LaserGun : Gun
 	public Transform ChargeBeam;
 
 	private float nextfire = 0;
-	private float delay = 0.75f;
+	private float delay = 0.2f;
 	private float chargeDelay = 0.25f;
 	private float chargeTime = 1f;
 	private float chargeEnd = float.MaxValue;
@@ -23,11 +23,18 @@ public class LaserGun : Gun
 	}
 
 	private Transform currentCharge;
-	
+
+    bool lastTriggerDown = false;
+    bool lastTriggerUp = false;
+
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetButtonDown("Fire2"))
+        bool triggerDown = Input.GetAxis("Fire2") > 0.1f;
+        bool triggerUp = Input.GetAxis("Fire2") < 0.1f && lastTriggerDown;
+       
+
+        if (Input.GetButtonDown("Fire2") || (triggerDown && lastTriggerDown == false))
 		{
 			if (chargeEnd == float.MaxValue && nextfire < Time.time)
 			{
@@ -45,12 +52,12 @@ public class LaserGun : Gun
 			}
 		}
 
-			if (chargeEnd != float.MaxValue && chargeEnd > Time.time && currentCharge != null)
-			{
-				currentCharge.localScale = Vector3.one * (50f * (Time.time - chargeStart));
-			}
+		if (chargeEnd != float.MaxValue && chargeEnd > Time.time && currentCharge != null)
+		{
+			currentCharge.localScale = Vector3.one * (50f * (Time.time - chargeStart));
+		}
 
-		if (Input.GetButtonUp("Fire2") && currentCharge != null)
+        if ((Input.GetButtonUp("Fire2") || triggerUp) && currentCharge != null)
 		{
 				//print ("FIRING");
 				this.audio.time = longtime;
@@ -67,21 +74,24 @@ public class LaserGun : Gun
 				chargeStart = -1;
 				currentCharge = null;
 		}
-		else if (Input.GetButtonUp("Fire2"))
+		else if (Input.GetButtonUp("Fire2") || triggerUp)
 		{
 			chargeEnd = float.MaxValue;
 			if (currentCharge != null)
 				DestroyImmediate(currentCharge.gameObject);
 		}
-		else if (Input.GetButtonDown("Fire1"))
+		else if (Input.GetButtonDown("Fire1") || Input.GetAxis("Fire1") > 0.1)
 		{
 			if (nextfire < Time.time)
 			{
 				StartCoroutine(FireShot(0.01f));
 				StartCoroutine(FireShot(0.1f));
-				// nextfire = Time.time + delay;
+				nextfire = Time.time + delay;
 			}
 		}
+
+        lastTriggerDown = triggerDown;
+        lastTriggerUp = triggerUp;
 	}
 
 	IEnumerator FireShot(float insec)
