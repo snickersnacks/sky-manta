@@ -59,6 +59,9 @@ public class OctoGun : MonoBehaviour
 
 			if (startFireAtTime < Time.time)
 			{
+                if (this.audio.isPlaying == false)
+                    this.audio.Play();
+
 				foreach (Transform eye in Eyes)
 					eye.renderer.material.color = Color.white;
 

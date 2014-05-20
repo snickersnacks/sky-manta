@@ -353,6 +353,7 @@ GameObject:
   - 114: {fileID: 117398119}
   - 82: {fileID: 117398121}
   - 65: {fileID: 117398120}
+  - 81: {fileID: 117398122}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -372,9 +373,10 @@ Transform:
   m_Children:
   - {fileID: 520271595}
   - {fileID: 1578920474}
+  - {fileID: 1941714583}
+  - {fileID: 691004767}
   - {fileID: 1609224814}
   - {fileID: 788644831}
-  - {fileID: 1941714583}
   - {fileID: 2026724756}
   m_Father: {fileID: 0}
 --- !u!54 &117398114
@@ -403,6 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5b8ca5ce3ddeb40bc7cd9a459f936c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Splash: {fileID: 691004768}
   avataranim: {fileID: 1941714584}
   BasePartRate: 100
   BasePartSpeed: -3
@@ -1600,6 +1603,13 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!81 &117398122
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117398112}
+  m_Enabled: 1
 --- !u!1 &139903241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3005,6 +3015,91 @@ SkinnedMeshRenderer:
     m_Center: {x: -.0233380683, y: .0120835528, z: .0370075256}
     m_Extent: {x: .114039749, y: .117771737, z: .0978333205}
   m_DirtyAABB: 0
+--- !u!1 &691004766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 691004767}
+  - 82: {fileID: 691004768}
+  m_Layer: 0
+  m_Name: Splash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691004767
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691004766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 117398113}
+--- !u!82 &691004768
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691004766}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 40af3b847160ec2408f16b4f193424fd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1.11000001
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &705347972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,7 +3205,6 @@ GameObject:
   - 20: {fileID: 788644830}
   - 92: {fileID: 788644829}
   - 124: {fileID: 788644828}
-  - 81: {fileID: 788644827}
   - 114: {fileID: 788644832}
   m_Layer: 8
   m_Name: Main Camera
@@ -3119,13 +3213,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &788644827
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 788644826}
-  m_Enabled: 1
 --- !u!124 &788644828
 Behaviour:
   m_ObjectHideFlags: 0
@@ -3322,11 +3409,11 @@ AudioSource:
   Loop: 0
   Mute: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 300
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

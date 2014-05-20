@@ -7,7 +7,7 @@ public class LaserGun : Gun
 	public Transform ChargeBeam;
 
 	private float nextfire = 0;
-	private float delay = 0.2f;
+	private float delay = 0.5f;
 	private float chargeDelay = 0.25f;
 	private float chargeTime = 1f;
 	private float chargeEnd = float.MaxValue;

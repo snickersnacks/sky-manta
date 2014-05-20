@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Movement : MonoBehaviour 
 {
+    public AudioSource Splash;
+
 	float slowrate = -2000;
 	float wateraccrate = 700;
 	float airaccrate = 700;
@@ -31,8 +33,24 @@ public class Movement : MonoBehaviour
 			change = airaccrate;
 		}
 
-		if (inwater != wasinwater)
-			change *= 60;
+        if (inwater != wasinwater)
+        {
+            if (inwater)
+            {
+                //GameObject isplash = (GameObject)GameObject.Instantiate(Splash.gameObject);
+                //isplash.transform.position = this.transform.position;
+                //isplash.audio.spread = 2;
+                //isplash.audio.Play();
+            }
+            else
+            {
+                //GameObject isplash = (GameObject)GameObject.Instantiate(Splash.gameObject);
+                //isplash.audio.
+                //isplash.audio.Play();
+
+            }
+            change *= 80;
+        }
 
 		wasinwater = inwater;
 		

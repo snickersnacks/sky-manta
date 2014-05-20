@@ -45,9 +45,16 @@ public class Bullet : MonoBehaviour
 				return;
 
 			stats.Hit(damage);
-			Destroy(this.gameObject);
+
+            StartCoroutine(DoDeaded());
 			deaded = true;
 		}
-
 	}
+
+    public IEnumerator DoDeaded()
+    {
+        this.audio.Play();
+        yield return new WaitForSeconds(this.audio.clip.length + 0.1f);
+        Destroy(this.gameObject);
+    }
 }
