@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
                 //isplash.audio.Play();
 
             }
-            change *= 80;
+            change *= 70;
         }
 
 		wasinwater = inwater;
